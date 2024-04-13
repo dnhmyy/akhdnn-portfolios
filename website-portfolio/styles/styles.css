@@ -62,6 +62,43 @@ a {
     }
 }
 
+/* Back Button */
+.back-button {
+    display: inline-block;
+    padding: 8px;
+    margin: 8px;
+    background-color: transparent;
+    border: none;
+    color: inherit; /* Atau warna yang Anda inginkan */
+    text-decoration: none;
+    transition: transform 0.3s ease; /* Animasi transisi yang halus */
+    position: relative;
+    top: -20px;
+  }
+  
+  .back-button i {
+    font-size: 16px; /* Atur ukuran ikon */
+  }
+  
+  .back-button:hover {
+    transform: scale(1.1); /* Membuat ikon sedikit lebih besar saat di-hover */
+    color: #555; /* Warna saat hover */
+  }
+  
+  /* Animasi tambahan untuk rotasi */
+  @keyframes rotate {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  .back-button:hover i {
+    animation: rotate 1s ease-in-out; /* Menambahkan animasi rotasi pada ikon */
+  }  
+
 /* Nav Animation */
 nav ul {
     list-style: none;
