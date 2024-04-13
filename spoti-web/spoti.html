@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spotify Saya</title>
+  <link rel="web icon" type="png" href="query/img/spotify.png">
+  <link rel="stylesheet" href="query/css.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+  
+  <style>
+    /* Background  */
+    body, html {
+      height: auto;
+      min-height: 100%;
+      overflow-x: hidden;
+      margin: 0;
+    }
+    .background {
+      position: fixed;
+      display: block;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: #252121;
+      z-index: -1;
+    }
+    .circle {
+      border-radius: 50%;
+      position: absolute;
+      opacity: 0.6;
+      background: rgba(255, 255, 255, 0.2);
+      animation: floaty 15s infinite ease-in-out alternate;
+    }
+    @keyframes floaty {
+      0% {
+        transform: translateY(0px);
+      }
+      100% {
+        transform: translateY(-800px);
+      }
+    }
+
+     /* Style untuk konten */
+     .content {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      padding-top: 1vh;
+      padding-bottom: 20px;
+    }
+    .content h1 {
+      font-size: 2.5em;
+      margin-bottom: 20px;
+      color: #fff;
+    }
+    .spotify-link {
+      display: inline-block;
+      background-color: #1DB954;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 20px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background-color 0.3s, box-shadow 0.3s;
+      margin-bottom: 40px;
+    }
+    .spotify-link-active {
+    background-color: #1ED760;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+    .spotify-link:hover {
+      background-color: #1ED760;
+      box-shadow: 0 4px 8px rgb(252, 221, 23);
+    }
+
+    .spotify-link:hover, .spotify-link:focus, .spotify-link:active {
+  background-color: #2980b9; /* Warna biru ketika hover atau klik */
+  color: white;
+  text-decoration: none;
+}
+
+.playlist-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  padding-bottom: 20px;
+  justify-content: center;
+  align-items: start;
+}
+
+.playlist-card {
+  background-color: rgba(18, 18, 18, 0.9);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out;
+  will-change: transform;
+}
+
+.playlist-card:hover {
+  transform: scale(1.02); /* Efek zoom ketika hover */
+}
+
+.playlist-header {
+  background-color: #1DB954;
+  color: white;
+  padding: 10px;
+  font-size: 1.2em;
+  text-align: center;
+}
+
+.playlist-iframe {
+  width: 100%;
+  height: 80px; /* Atur tinggi sesuai kebutuhan */
+  border: none;
+}
+  </style>
+</head>
+<body>
+
+<div class="background">
+  <div class="circle" style="width: 200px; height: 200px; top: 20%; left: 15%;"></div>
+  <div class="circle" style="width: 75px; height: 75px; top: 20%; left: 55%;"></div>
+  <div class="circle" style="width: 300px; height: 300px; top: 50%; left: 60%; animation-delay: 5s;"></div>
+  <div class="circle" style="width: 150px; height: 150px; top: 70%; left: 40%; animation-delay: 3s;"></div>
+  <!-- Tambahkan lebih banyak lingkaran sesuai keinginan -->
+</div>
+
+<!-- Konten utama website Anda di sini -->
+<div class="content">
+    <h1>Selamat Datang di Spotify Saya</h1>
+    <!-- Ganti "URL_PROFIL_SPOTIFY_ANDA" dengan URL profil Spotify Anda -->
+    <a href="https://open.spotify.com/user/31dldrdk5ifx2uvaqibmglojumtq?si=1f8d7b1578f84e32" class="spotify-link" id="visit-profile" target="_blank">Kunjungi Profil</a>
+    
+    <div class="playlist-container">
+        <!-- Playlist 1 -->
+        <div class="playlist-card">
+            <!-- <div class="playlist-header">Playlist 1</div> -->
+            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/26xGjKGVrkoLXogkapzgJ6?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        </div>
+        <!-- Playlist 2 -->
+        <div class="playlist-card">
+          <!-- <div class="playlist-header">Playlist 2</div> -->
+          <iframe style="border-radius:12px" src="https://open.spotify.com/embed/artist/7pbDxGE6nQSZVfiFdq9lOL?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        </div>
+        <!-- Playlist 3 -->
+        <div class="playlist-card">
+            <!-- <div class="playlist-header">Playlist 2</div> -->
+            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/artist/20zafXaLhm5IcXnSU93rNn?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+          </div>
+          <!-- Playlist 4 -->
+        <div class="playlist-card">
+            <!-- <div class="playlist-header">Playlist 2</div> -->
+            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/2sV2h8UBcLiLHUwk5qiVvM?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+          </div>
+          <!-- Playlist 5 -->
+        <div class="playlist-card">
+            <!-- <div class="playlist-header">Playlist 2</div> -->
+            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/artist/2iDVt6mFbtbDEZG5ax0dTi?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+          </div>
+          <!-- Playlist 6 -->
+        <div class="playlist-card">
+            <!-- <div class="playlist-header">Playlist 2</div> -->
+            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/1MDVXlgY8Of2n2otw57hw0?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+          </div>
+        <!-- Tambahkan lebih banyak playlist sesuai kebutuhan -->
+      </div>
+    </div>
+
+    <!-- JS -->
+<script>
+  // Mendapatkan elemen tombol
+  var visitProfileBtn = document.getElementById('visit-profile');
+
+  // Menambahkan event listener untuk klik
+  visitProfileBtn.addEventListener('click', function(event) {
+    // Mencegah tombol melakukan aksi defaultnya (mengarahkan ke link)
+    event.preventDefault();
+
+    // Menambahkan class untuk animasi
+    this.classList.add('spotify-link-active');
+
+    // Menunggu animasi selesai (misalnya 500ms) sebelum mengarahkan ke link
+    setTimeout(function() {
+      // Mengarahkan ke link setelah animasi
+      window.location = visitProfileBtn.href;
+    }, 400); // Durasi animasi dalam milidetik
+  });
+</script>
+
+    </body>
+    </html>
