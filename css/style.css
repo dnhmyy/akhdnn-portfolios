@@ -618,6 +618,7 @@ Home Section
 	border-radius: 50%;
 	border: 8px solid var(--white-alpha-25);
 	margin: auto;
+	margin-left: 70px;
 }
 
 .home-img .img-box img {
@@ -977,6 +978,7 @@ Responsive
 	}
 	.home-img .img-box {
 		max-width: 300px;
+		margin: auto;
 	}
 	.home-text .btn {
 		margin: 0 7px 15px;
