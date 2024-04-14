@@ -28,11 +28,11 @@
 
 /* Background  */
 body, html {
-  height: auto;
-  min-height: 100%;
+  height: 100%; /* Gunakan 100% ketinggian untuk memastikan latar belakang mengisi seluruh layar */
   overflow-x: hidden;
   margin: 0;
 }
+
 .background {
   position: fixed;
   display: block;
@@ -43,19 +43,27 @@ body, html {
   background: #252121;
   z-index: -1;
 }
+
 .circle {
   border-radius: 50%;
   position: absolute;
   opacity: 0.6;
   background: rgba(255, 255, 255, 0.2);
   animation: floaty 15s infinite ease-in-out alternate;
+  /* Menggunakan unit vw untuk mengatur ukuran lingkaran agar responsif */
+  width: 10vw; /* Ukuran lebar lingkaran sebagai 10% dari lebar viewport */
+  height: 10vw; /* Ukuran tinggi lingkaran juga sebagai 10% dari lebar viewport */
+  /* Menggunakan unit vw untuk mengatur posisi lingkaran agar responsif */
+  top: 20vw; /* Jarak lingkaran dari atas viewport sebagai 20% dari lebar viewport */
+  left: 40vw; /* Jarak lingkaran dari kiri viewport sebagai 40% dari lebar viewport */
 }
+
 @keyframes floaty {
   0% {
     transform: translateY(0px);
   }
   100% {
-    transform: translateY(-800px);
+    transform: translateY(-80vw);
   }
 }
 
