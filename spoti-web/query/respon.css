@@ -1,0 +1,37 @@
+/* Aturan umum untuk mobile */
+@media only screen and (max-width: 768px) {
+  .content h1 {
+    font-size: 1.5em; /* Ukuran font yang lebih kecil untuk judul */
+  }
+
+  .spotify-link {
+    padding: 8px 16px; /* Padding yang lebih kecil untuk tombol */
+  }
+
+  .playlist-container {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Kolom yang lebih kecil */
+  }
+
+  .playlist-card {
+    transition: none; /* Menghilangkan animasi zoom untuk menghindari lag */
+  }
+}
+
+/* Aturan khusus untuk layar sangat kecil seperti ponsel */
+@media only screen and (max-width: 480px) {
+  .content {
+    padding-top: 10px; /* Padding atas yang lebih kecil */
+  }
+
+  .spotify-link {
+    font-size: 0.9em; /* Ukuran font yang lebih kecil untuk tombol */
+  }
+
+  .playlist-header {
+    font-size: 1em; /* Ukuran font yang lebih kecil untuk judul playlist */
+  }
+
+  .playlist-iframe {
+    height: 60px; /* Tinggi iframe yang lebih kecil */
+  }
+}

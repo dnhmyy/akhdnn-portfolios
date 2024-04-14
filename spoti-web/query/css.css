@@ -1,0 +1,152 @@
+/* Tambahkan ini di dalam <style> tag */
+.back-button-container {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  width: 50px; /* Atur ukuran sesuai kebutuhan */
+  height: 50px; /* Atur ukuran sesuai kebutuhan */
+  overflow: hidden;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.5); /* Latar belakang transparan */
+  }
+  
+  .back-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  animation: back-button-animation 1s forwards;
+  }
+  
+  .back-button img {
+  width: 30px; /* Atur ukuran sesuai kebutuhan */
+  transition: transform 0.3s;
+  }
+  
+  .back-button:hover img {
+  transform: scale(1.3);
+  }
+  
+  @keyframes back-button-animation {
+      0% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.2);
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
+
+/* Background  */
+body, html {
+  height: auto;
+  min-height: 100%;
+  overflow-x: hidden;
+  margin: 0;
+}
+.background {
+  position: fixed;
+  display: block;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #252121;
+  z-index: -1;
+}
+.circle {
+  border-radius: 50%;
+  position: absolute;
+  opacity: 0.6;
+  background: rgba(255, 255, 255, 0.2);
+  animation: floaty 15s infinite ease-in-out alternate;
+}
+@keyframes floaty {
+  0% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(-800px);
+  }
+}
+
+ /* Style untuk konten */
+ .content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding-top: 1vh;
+  padding-bottom: 20px;
+}
+.content h1 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  color: #fff;
+}
+.spotify-link {
+  display: inline-block;
+  background-color: #1DB954;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s, box-shadow 0.3s;
+  margin-bottom: 40px;
+}
+.spotify-link-active {
+background-color: #1ED760;
+box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+.spotify-link:hover {
+  background-color: #1ED760;
+  box-shadow: 0 4px 8px rgb(252, 221, 23);
+}
+
+.spotify-link:hover, .spotify-link:focus, .spotify-link:active {
+background-color: #2980b9; /* Warna biru ketika hover atau klik */
+color: white;
+text-decoration: none;
+}
+
+.playlist-container {
+display: grid;
+grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+gap: 20px;
+padding: 20px;
+padding-bottom: 20px;
+justify-content: center;
+align-items: start;
+}
+
+.playlist-card {
+background-color: rgba(18, 18, 18, 0.9);
+border-radius: 12px;
+overflow: hidden;
+transition: transform 0.3s ease-in-out;
+will-change: transform;
+}
+
+.playlist-card:hover {
+transform: scale(1.02); /* Efek zoom ketika hover */
+}
+
+.playlist-header {
+background-color: #1DB954;
+color: white;
+padding: 10px;
+font-size: 1.2em;
+text-align: center;
+}
+
+.playlist-iframe {
+width: 100%;
+height: 80px; /* Atur tinggi sesuai kebutuhan */
+border: none;
+}
